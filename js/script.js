@@ -28,10 +28,10 @@ $('.nav-link').click(function () {
 // Carousel mobile swipe jquery
 
 $(document).ready(function() {
-   $("#myCarousel").swiperight(function() {
+   $("#masters-carousel").swiperight(function() {
       $(this).carousel('prev');
     });
-   $("#myCarousel").swipeleft(function() {
+   $("#masters-carousel").swipeleft(function() {
       $(this).carousel('next');
    });
 });
