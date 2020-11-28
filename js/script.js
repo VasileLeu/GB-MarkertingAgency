@@ -26,23 +26,34 @@ $('.nav-link').click(function () {
 
 
 // Carousel mobile swipe jquery
+$( document ).ready(function() {
 
-$(".carousel").on("touchstart", function(event){
-        var xClick = event.originalEvent.touches[0].pageX;
-    $(this).one("touchmove", function(event){
-        var xMove = event.originalEvent.touches[0].pageX;
-        if( Math.floor(xClick - xMove) > 5 ){
-            $(this).carousel('next');
-        }
-        else if( Math.floor(xClick - xMove) < -5 ){
-            $(this).carousel('prev');
-        }
+    // Carousel
+
+    $(".carousel").carousel({
+        interval: false,
+        pause: true
     });
-    $(".carousel").on("touchend", function(){
-            $(this).off("touchmove");
-    });
+
+    $( ".carousel .carousel-inner" ).swipe( {
+    swipeLeft: function ( event, direction, distance, duration, fingerCount ) {
+        this.parent( ).carousel( 'next' );
+    },
+    swipeRight: function ( ) {
+        this.parent( ).carousel( 'prev' );
+    },
+    threshold: 0,
+    tap: function(event, target) {
+        window.location = $(this).find('.carousel-item.active a').attr('href');
+    },
+    excludedElements:"label, button, input, select, textarea, .noSwipe"
+    } );
+
+    $('.carousel .carousel-inner').on('dragstart', 'a', function () {
+        return false;
+    });  
+
 });
-
 
 
 //  Google maps costum marker
