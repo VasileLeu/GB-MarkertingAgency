@@ -159,7 +159,7 @@ a:hover {
 .header-background {
   width: 100%;
   display: block;
-  background-image: url(/images/background/header-background.jpg);
+  background-image: url(./images/background/header-background.jpg);
   height:800px;
   position: absolute;
   top: 0;
