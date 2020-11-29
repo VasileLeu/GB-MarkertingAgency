@@ -1005,3 +1005,37 @@ a:hover {
 
 /* Button sign-in animation */
 
+/* Slider styles */
+
+
+
+
+span.swiper-pagination-bullet {
+  background-color: rgb(255, 255, 255);
+  margin: 6px;
+}
+
+#marketing-masters {
+  position: relative;
+}
+
+.swiper-button-prev {
+  padding-left: 40px;
+}
+
+.swiper-button-next {
+  padding-right: 40px;
+}
+
+@media (max-width: 700px) {
+  .swipper-buttons {
+    display: none;
+  }
+}
+
+.swipe-dots {
+  margin-top: 20px;
+}
+
+
+
