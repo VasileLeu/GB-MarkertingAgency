@@ -1,3 +1,10 @@
+// Init swiper slider
+
+var swiper = new Swiper('.swiper-container');
+
+
+
+
 // Language selector
 
 $(function(){
