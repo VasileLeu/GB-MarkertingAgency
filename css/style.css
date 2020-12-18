@@ -1027,10 +1027,12 @@ span.swiper-pagination-bullet {
 
 .swiper-button-prev {
   padding-left: 40px;
+  outline: none;
 }
 
 .swiper-button-next {
   padding-right: 40px;
+  outline: none;
 }
 
 @media (max-width: 700px) {
